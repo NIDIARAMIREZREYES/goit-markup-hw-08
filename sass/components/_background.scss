@@ -43,6 +43,9 @@
     &__firsttitle {
       width: unset;
     }
+        &__buttontitle {
+          margin: 20px;
+        }
   }
     
 }
@@ -51,4 +54,5 @@
   &__firsttitle {
       width: unset;
     }
+}
 }
