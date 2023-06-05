@@ -1,7 +1,9 @@
 .contacts {
   display: flex;
-  align-items: center;
-  gap: 30px;
+  align-items:center;
+padding-left: 240px;
+  gap: 20px;
+  
   &__link {
     display: flex;
     align-items: center;
@@ -15,10 +17,29 @@
 
   &__icon {
     margin-right: 10px;
+    margin-left: 10px;
   }
 
   &__link:hover {
     color: var(--brand-color);
     fill: var(--brand-color);
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  .contacts {
+    display: block;
+    padding-left: 10px;
+&__link {
+  padding: 5px;
+}
+  }
+}
+@media screen and (max-width: 480px) {
+  .contacts {
+      &__icon {
+        display: none;
+      }
   }
 }

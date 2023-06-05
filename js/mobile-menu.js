@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const mobileToggle = document.querySelector(".navbar__mobile-toggle");
-  const navbarList = document.querySelector(".navbar__list");
+const navbarToggleButton = document.querySelector('.navbar__toggle-button');
+const navbarList = document.querySelector('.navbar__list');
 
-  mobileToggle.addEventListener("click", function () {
-    navbarList.classList.toggle("mobile-visible");
-  });
+
+
+navbarToggleButton.addEventListener('click', () => {
+  navbarList.classList.toggle('active');
 });

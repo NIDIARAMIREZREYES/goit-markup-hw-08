@@ -1,8 +1,7 @@
 .navbar {
   display: flex;
-  padding: 24px;
-  justify-content: space-between;
   align-items: center;
+  padding: 24px;
 
   &__list {
     display: flex;
@@ -20,6 +19,7 @@
   }
 
   &__button {
+    display: flex;
     position: relative;
     font-weight: 500;
     line-height: 1.1;
@@ -44,8 +44,38 @@
     color: var(--brand-color);
   }
 
+  &__toggle-button {
+    display: none;
+  }
 }
 
-@media screen and (min-width: 480.98px) {
+@media screen and (max-width: 768px) {
+  .navbar {
+    &__logo {
+      margin-right: 60px;
+    }
+    &__button.active::after {
+      top: 54px;
+    }
+  }
+}
 
+@media screen and (max-width: 480px) {
+  .navbar {
+    &__list {
+      display: none;
+    }
+
+    &__list.active {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__toggle-button {
+      display: block;
+    }
+        &__button.active::after {
+          display: none;
+        }
+  }
 }
