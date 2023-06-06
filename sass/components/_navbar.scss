@@ -5,6 +5,7 @@
 
   &__list {
     display: flex;
+    list-style: none;
     align-items: center;
   }
 
@@ -44,10 +45,87 @@
     color: var(--brand-color);
   }
 
-  &__toggle-button {
-    display: none;
+  &__list &__button,
+  &__list &__button {
+    text-decoration: underline;
   }
+
+  .menu-toggle {
+    display: none;
+    min-height: 40px;
+    min-width: 40px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  .menu-toggle:hover,
+  .menu-toggle:focus {
+    color: var(--brand-color);
+  }
+    .menu-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      padding: 32px;
+      background-color: #ffffff;
+      z-index: 999;
+  
+      transform: translateX(100%);
+      transition: transform 250ms ease-in-out;
+    }
+  
+    .menu-container.is-open {
+      transform: translateX(0);
+    }
+  
+    .menu-container .menu-toggle {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      color: #fff;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 768px) {
   .navbar {
@@ -65,17 +143,11 @@
     &__list {
       display: none;
     }
-
-    &__list.active {
+    .menu-toggle {
       display: flex;
-      flex-direction: column;
     }
-
-    &__toggle-button {
-      display: block;
+    &__button.active::after {
+      display: none;
     }
-        &__button.active::after {
-          display: none;
-        }
   }
 }
