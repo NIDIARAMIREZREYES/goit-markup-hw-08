@@ -45,39 +45,88 @@
     color: var(--brand-color);
   }
 
-    .navbar__list.show {
-      display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: white;
-        padding: 24px;
-        z-index: 9999;
+  .navbar__list.show {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 40px;
+    align-items: stretch;
+  }
+
+  .navbar__open {
+    display: none;
+    min-height: 40px;
+    min-width: 40px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  .navbar__open:focus,
+  .navbar__close {
+    color: var(--brand-color);
+  }
+
+  .navbar__close {
+    display: none;
+    position: fixed;
+    min-height: 40px;
+    min-width: 40px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  .navbar__menu {
+    font-size: 18px;
+    color: var(--brand-color);
+    display: flex;
+    justify-content: space-between;
+
+
+  
+   
+
+  }
+
+.navbar__social {
+width: 0px;
+  height: 22px;
+  left: 35px;
+
+  top: 726px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    .navbar__menu {
+      display: none;
     }
-
-        .navbar__hamburger {
-          display: none;
-          
-
+  }
 }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 768px) {
   .navbar {
@@ -92,16 +141,20 @@
 
 @media screen and (max-width: 480px) {
   .navbar {
-    
     &__button.active::after {
       display: none;
     }
+    &__button {
+      font-size: 40px;
+      margin: 20px;
+    }
 
-        &__list {
-        display: none;
-  }
-    .navbar__hamburger {
+    &__list {
+      display: none;
+    }
+    .navbar__open {
       display: flex;
     }
-}
+
+  }
 }
