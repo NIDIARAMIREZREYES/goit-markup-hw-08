@@ -45,7 +45,7 @@
     color: var(--brand-color);
   }
 
-  .navbar__list.show {
+  &__list.show {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -58,7 +58,7 @@
     align-items: stretch;
   }
 
-  .navbar__open {
+&__open {
     display: none;
     min-height: 40px;
     min-width: 40px;
@@ -74,12 +74,8 @@
     right: 16px;
   }
 
-  .navbar__open:focus,
-  .navbar__close {
-    color: var(--brand-color);
-  }
 
-  .navbar__close {
+ &__close {
     display: none;
     position: fixed;
     min-height: 40px;
@@ -96,33 +92,29 @@
     right: 16px;
   }
 
-  .navbar__menu {
+  &__menu {
     font-size: 18px;
     color: var(--brand-color);
     display: flex;
     justify-content: space-between;
 
-
-  
-   
-
   }
 
-.navbar__social {
+&__social {
 width: 0px;
   height: 22px;
   left: 35px;
 
-  top: 726px;
-
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  left: 35px;
+margin-right: 10px;padding-right: 10px;
+border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 }
 
 @media screen and (min-width: 768px) {
   .navbar {
-    .navbar__menu {
+    &__menu {
       display: none;
     }
   }
@@ -152,7 +144,7 @@ width: 0px;
     &__list {
       display: none;
     }
-    .navbar__open {
+    &__open {
       display: flex;
     }
 

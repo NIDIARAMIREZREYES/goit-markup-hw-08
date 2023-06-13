@@ -151,3 +151,19 @@
     margin: 10px 0px 0px 10px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 575px;
+    left: 15px;
+    top: 94px;
+
+
+      &__submit {
+              left: 80px;
+        }
+  }
+
+
+}
